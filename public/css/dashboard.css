@@ -1,0 +1,73 @@
+.battery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.battery {
+  width: 64px; /* Increase the width */
+  height: 32px; /* Increase the height */
+  position: relative;
+  background: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.level {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #4caf50;
+  transition: width 0.5s ease-in-out;
+}
+
+#battery-percentage {
+  font-size: 2rem; /* Adjust font size */
+  font-weight: bold;
+  margin: 10px;
+}
+
+#chart-container {
+  margin-top: 20px;
+}
+
+/* Chart.js responsive settings */
+.chart-container {
+  position: relative; /* Chart container should be relative */
+  margin: auto;
+  height: 60vh; /* Set to use 50% of the screen height */
+  max-height: 500px; /* Maximum height for larger devices */
+}
+
+@media (min-width: 768px) {
+  .content-section {
+    margin-bottom: 0;
+  }
+  #myChart {
+    height: 100% !important; /* Smaller height on smaller screens */
+  }
+}
+@media (max-width: 500px) {
+  #myChart {
+    height: 50rem !important; /* Smaller height on smaller screens */
+  }
+  .main-content.open {
+    overflow: hidden;
+  }
+
+  html,
+  body {
+    height: 100%; /* Make the body and HTML element full-height */
+  }
+}
+@media (max-width: 380px) {
+  #volz {
+    padding: 1rem;
+  }
+  #myChart {
+    height: 40rem !important; /* Smaller height on smaller screens */
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body class="bg-gray-200">
+    <div class="sidebar">
+      <button id="closeSidebar" class="absolute top-5 right-5 m-4 text-2xl">
+        &times;
+      </button>
+      <div class="sidebar-content text-white p-4 mt-10">
+        <h2 class="text-2xl font-bold mb-10 text-center">
+          <img src="../assets/PUP-removebg-preview.png" />
+        </h2>
+        <nav class="flex flex-col">
+          <a href="../home.html" class="sidebar-link">
+            <i class="fas fa-home"></i> Home
+          </a>
+          <a href="./dashboard.html" class="sidebar-link sidebar-link-active">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+          </a>
+          <a href="./account-management.html" class="sidebar-link">
+            <i class="fas fa-user-cog"></i> Account Management
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="h-screen flex flex-col">
+      <div class="flex-shrink-0 bg-white shadow">
+        <!-- Header content -->
+        <div class="flex flex-row max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+          <div id="sidebarToggle" class="text-lg font-semibold text-gray-800">
+            ☰
+          </div>
+          <h1 class="text-lg font-semibold text-center flex-grow">Dashboard</h1>
+        </div>
+      </div>
+      <div class="flex-grow overflow-y-auto main-content">
+        <!-- Main content -->
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Left side content -->
+            <div
+              class="content-section bg-white rounded-lg shadow-md flex justify-center p-8"
+            >
+              <div class="text-3xl">
+                <p>Battery Voltage:</p>
+              </div>
+              <div class="justify-items-center" id="volz">
+                <p class="text-3xl font-bold" id="voltage1"></p>
+              </div>
+            </div>
+            <!-- Right side content -->
+            <div class="content-section bg-white rounded-lg shadow-md p-6">
+              <div class="battery-container">
+                <div class="battery">
+                  <div class="level" id="battery-level"></div>
+                </div>
+                <span id="battery-percentage" class="text-3xl font-bold"
+                  >0%</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Chart container -->
+          <div class="mt-6 bg-white rounded-lg shadow-md p-6">
+            <canvas id="myChart" class="w-full h-full"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/sidebar.js"></script>
+  </body>
+</html>

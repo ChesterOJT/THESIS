@@ -58,6 +58,11 @@ body {
 }
 
 /* =============== Navigation ================ */
+
+.logo {
+  margin-bottom: 40px;
+}
+
 .navigation {
   position: fixed;
   width: 300px;
@@ -70,52 +75,52 @@ body {
 .navigation.active {
   width: 80px;
 }
-
-.navigation ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.closebutton {
+  visibility: hidden;
 }
-
-.navigation ul li {
+.nav-top {
+  display: flex;
+}
+.side {
   position: relative;
   width: 100%;
   list-style: none;
+  margin-bottom: 2.5rem;
+}
+.part_active {
+  position: relative;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--blue);
+  background-color: var(--white);
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
 
-.navigation ul li:hover,
-.navigation ul li.hovered {
-  background-color: var(--white);
-}
-
-.navigation ul li:nth-child(1) {
-  margin-bottom: 40px;
-  pointer-events: none;
-}
-
-.navigation ul li a {
+.part {
   position: relative;
-  display: block;
   width: 100%;
   display: flex;
   text-decoration: none;
   color: var(--white);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
-.navigation ul li:hover a,
-.navigation ul li.hovered a {
+.part:hover {
   color: var(--blue);
+  background-color: var(--white);
 }
 
-.navigation ul li a .icon {
+.icon {
   position: relative;
   display: block;
   min-width: 60px;
   height: 60px;
-  line-height: 75px;
+  line-height: 70px;
   text-align: center;
+  font-size: 1.75rem;
+  align-items: center;
 }
 
 .pup-logo {
@@ -125,25 +130,23 @@ body {
   height: 60px;
   line-height: 75px;
   text-align: center;
+  margin-top: 20px;
 }
-
-.navigation ul li a .icon ion-icon {
-  font-size: 1.75rem;
+.bchart {
+  height: 50px;
 }
-
-.navigation ul li a .title {
+.title {
   position: relative;
   display: block;
   padding: 0 10px;
-  height: 60px;
+  height: 50px;
   line-height: 60px;
   text-align: start;
   white-space: nowrap;
 }
 
 /* --------- curve outside ---------- */
-.navigation ul li:hover a::before,
-.navigation ul li.hovered a::before {
+.part_active::before {
   content: "";
   position: absolute;
   right: 0;
@@ -155,8 +158,31 @@ body {
   box-shadow: 35px 35px 0 10px var(--white);
   pointer-events: none;
 }
-.navigation ul li:hover a::after,
-.navigation ul li.hovered a::after {
+.part_active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+}
+.part:hover::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+.part:hover::after {
   content: "";
   position: absolute;
   right: 0;
@@ -170,6 +196,10 @@ body {
 }
 
 /* ===================== Main ===================== */
+.blur {
+  filter: blur(5px); /* Adjust the blur strength as needed */
+  pointer-events: none; /* Prevent clicking on blurred elements */
+}
 .main {
   position: absolute;
   width: calc(100% - 300px);
@@ -182,7 +212,10 @@ body {
   width: calc(100% - 80px);
   left: 80px;
 }
-
+.new-tit {
+  font-weight: 500;
+  font-size: large;
+}
 .topbar {
   width: 100%;
   height: 60px;
@@ -306,6 +339,7 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 30px;
+  height: 300px;
   /* margin-top: 10px; */
 }
 
@@ -471,7 +505,7 @@ body {
     grid-template-columns: 1fr;
   }
   .recentOrders {
-    overflow-x: auto;
+    overflow-x: hidden;
   }
   .status.inProgress {
     white-space: nowrap;
@@ -479,11 +513,23 @@ body {
 }
 
 @media (max-width: 480px) {
+  .blur {
+    filter: blur(5px); /* Adjust the blur amount as needed */
+    pointer-events: none; /* Prevent clicking on blurred elements */
+  }
   .cardBox {
     grid-template-columns: repeat(1, 1fr);
   }
   .cardHeader h2 {
     font-size: 20px;
+  }
+  .closebutton {
+    margin-left: 11.5rem;
+    margin-top: 1rem;
+    width: 20px;
+    height: 20px;
+    color: black;
+    visibility: visible;
   }
   .user {
     min-width: 40px;
@@ -494,11 +540,11 @@ body {
     z-index: 1000;
   }
   .navigation.active {
-    width: 100%;
+    width: 80%;
     left: 0;
   }
   .toggle {
-    z-index: 10001;
+    z-index: 10;
   }
   .main.active .toggle {
     color: #fff;

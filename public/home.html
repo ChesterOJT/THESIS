@@ -22,80 +22,75 @@
     <!-- =============== Navigation ================ -->
     <div class="container">
       <div class="navigation">
-        <ul>
-          <li>
+        <div class="nav-top">
+          <div class="logo">
             <a href="home.html">
               <span class="icon">
                 <img
                   class="pup-logo"
-                  src="assets/PUP-removebg-preview.png"
+                  src="assets/thunder-logo.png"
                   alt="PUP Logo"
                 />
               </span>
-              <span class="title">Solar UPS Monitoring System</span>
             </a>
-          </li>
+          </div>
+          <button class="closebutton">X</button>
+        </div>
 
-          <li>
-            <a href="#">
-              <span class="icon">
-                <ion-icon name="home-outline"></ion-icon>
-              </span>
-              <span class="title">Dashboard</span>
-            </a>
-          </li>
+        <div class="side">
+          <a href="#" class="part_active">
+            <span class="icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <span class="title">Dashboard</span>
+          </a>
+        </div>
 
-          <li>
-            <a href="./websites/account-management.html">
-              <span class="icon">
-                <ion-icon name="people-outline"></ion-icon>
-              </span>
-              <span class="title">Accounts</span>
-            </a>
-          </li>
+        <div class="side">
+          <a href="./websites/account-management.html" class="part">
+            <span class="icon">
+              <ion-icon name="people-outline"></ion-icon>
+            </span>
+            <span class="title">Accounts</span>
+          </a>
+        </div>
 
-          <li>
-            <a href="#">
-              <span class="icon">
-                <ion-icon name="help-outline"></ion-icon>
-              </span>
-              <span class="title">Help</span>
-            </a>
-          </li>
+        <div class="side">
+          <a href="#" class="part">
+            <span class="icon">
+              <ion-icon name="help-outline"></ion-icon>
+            </span>
+            <span class="title">Help</span>
+          </a>
+        </div>
 
-          <li>
-            <a href="#">
-              <span class="icon">
-                <ion-icon name="settings-outline"></ion-icon>
-              </span>
-              <span class="title">Settings</span>
-            </a>
-          </li>
+        <div class="side">
+          <a href="#" class="part">
+            <span class="icon">
+              <ion-icon name="settings-outline"></ion-icon>
+            </span>
+            <span class="title">Settings</span>
+          </a>
+        </div>
 
-          <li>
-            <a href="index.html">
-              <span class="icon">
-                <ion-icon name="log-out-outline"></ion-icon>
-              </span>
-              <span class="title">Sign Out</span>
-            </a>
-          </li>
-        </ul>
+        <div class="side">
+          <a href="index.html" class="part">
+            <span class="icon">
+              <ion-icon name="log-out-outline"></ion-icon>
+            </span>
+            <span class="title">Sign Out</span>
+          </a>
+        </div>
       </div>
 
       <!-- ========================= Main ==================== -->
       <div class="main">
         <div class="topbar">
-          <div class="toggle">
+          <div class="toggle" id="sidebarToggle">
             <ion-icon name="menu-outline"></ion-icon>
           </div>
 
-          <div class="search">
-            <label>
-              <input type="text" placeholder="Search here" />
-              <ion-icon name="search-outline"></ion-icon>
-            </label>
-          </div>
+          <div class="new-tit">Solar UPS Monitoring System</div>
 
           <div class="user">
             <img src="assets/customer01.jpg" alt="" />
@@ -141,122 +136,10 @@
           <!-- ================= New Customers ================ -->
           <div class="recentCustomers">
             <div class="cardHeader">
-              <h2>Accounts Management</h2>
+              <h2>Watt Meter</h2>
             </div>
 
-            <table>
-              <tr>
-                <td width="60px">
-                  <div class="imgBx">
-                    <img src="assets/customer02.jpg" alt="" />
-                  </div>
-                </td>
-                <td>
-                  <h4>
-                    David <br />
-                    <span>Italy</span>
-                  </h4>
-                </td>
-              </tr>
-
-              <tr>
-                <td width="60px">
-                  <div class="imgBx">
-                    <img src="assets/customer02.jpg" alt="" />
-                  </div>
-                </td>
-                <td>
-                  <h4>
-                    Amit <br />
-                    <span>India</span>
-                  </h4>
-                </td>
-              </tr>
-
-              <tr>
-                <td width="60px">
-                  <div class="imgBx">
-                    <img src="assets/customer02.jpg" alt="" />
-                  </div>
-                </td>
-                <td>
-                  <h4>
-                    David <br />
-                    <span>Italy</span>
-                  </h4>
-                </td>
-              </tr>
-
-              <tr>
-                <td width="60px">
-                  <div class="imgBx">
-                    <img src="assets/customer02.jpg" alt="" />
-                  </div>
-                </td>
-                <td>
-                  <h4>
-                    Amit <br />
-                    <span>India</span>
-                  </h4>
-                </td>
-              </tr>
-
-              <tr>
-                <td width="60px">
-                  <div class="imgBx">
-                    <img src="assets/customer02.jpg" alt="" />
-                  </div>
-                </td>
-                <td>
-                  <h4>
-                    David <br />
-                    <span>Italy</span>
-                  </h4>
-                </td>
-              </tr>
-
-              <tr>
-                <td width="60px">
-                  <div class="imgBx">
-                    <img src="assets/customer02.jpg" alt="" />
-                  </div>
-                </td>
-                <td>
-                  <h4>
-                    Amit <br />
-                    <span>India</span>
-                  </h4>
-                </td>
-              </tr>
-
-              <tr>
-                <td width="60px">
-                  <div class="imgBx">
-                    <img src="assets/customer02.jpg" alt="" />
-                  </div>
-                </td>
-                <td>
-                  <h4>
-                    David <br />
-                    <span>Italy</span>
-                  </h4>
-                </td>
-              </tr>
-
-              <tr>
-                <td width="60px">
-                  <div class="imgBx">
-                    <img src="assets/customer02.jpg" alt="" />
-                  </div>
-                </td>
-                <td>
-                  <h4>
-                    Amit <br />
-                    <span>India</span>
-                  </h4>
-                </td>
-              </tr>
-            </table>
+            <canvas id="barChart" class="bchart"></canvas>
           </div>
         </div>
       </div>
@@ -268,6 +151,7 @@
     <!-- ====== ionicons ======= -->
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

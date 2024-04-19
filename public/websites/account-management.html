@@ -13,87 +13,81 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
   <body>
     <!-- =============== Navigation ================ -->
     <div class="container">
       <div class="navigation">
-        <ul>
-          <li>
-            <a href="home.html">
-              <span class="icon">
-                <img
-                  class="pup-logo"
-                  src="../assets/PUP-removebg-preview.png"
-                  alt="PUP Logo"
-                />
-              </span>
-              <span class="title">Solar UPS Monitoring System</span>
-            </a>
-          </li>
+        <div class="logo">
+          <a href="home.html">
+            <span class="icon">
+              <img
+                class="pup-logo"
+                src="../assets/thunder-logo.png"
+                alt="PUP Logo"
+              />
+            </span>
+          </a>
+        </div>
 
-          <li>
-            <a href="../home.html">
-              <span class="icon">
-                <ion-icon name="home-outline"></ion-icon>
-              </span>
-              <span class="title">Dashboard</span>
-            </a>
-          </li>
+        <div class="side">
+          <a href="../home.html" class="part">
+            <span class="icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <span class="title">Dashboard</span>
+          </a>
+        </div>
 
-          <li>
-            <a href="account-management.html">
-              <span class="icon">
-                <ion-icon name="people-outline"></ion-icon>
-              </span>
-              <span class="title">Accounts</span>
-            </a>
-          </li>
+        <div class="side">
+          <a href="./account-management.html" class="part_active">
+            <span class="icon">
+              <ion-icon name="people-outline"></ion-icon>
+            </span>
+            <span class="title">Accounts</span>
+          </a>
+        </div>
 
-          <li>
-            <a href="#">
-              <span class="icon">
-                <ion-icon name="help-outline"></ion-icon>
-              </span>
-              <span class="title">Help</span>
-            </a>
-          </li>
+        <div class="side">
+          <a href="#" class="part">
+            <span class="icon">
+              <ion-icon name="help-outline"></ion-icon>
+            </span>
+            <span class="title">Help</span>
+          </a>
+        </div>
 
-          <li>
-            <a href="#">
-              <span class="icon">
-                <ion-icon name="settings-outline"></ion-icon>
-              </span>
-              <span class="title">Settings</span>
-            </a>
-          </li>
+        <div class="side">
+          <a href="#" class="part">
+            <span class="icon">
+              <ion-icon name="settings-outline"></ion-icon>
+            </span>
+            <span class="title">Settings</span>
+          </a>
+        </div>
 
-          <li>
-            <a href="#">
-              <span class="icon">
-                <ion-icon name="log-out-outline"></ion-icon>
-              </span>
-              <span class="title">Sign Out</span>
-            </a>
-          </li>
-        </ul>
+        <div class="side">
+          <a
+            href="../index.html
+          "
+            class="part"
+          >
+            <span class="icon">
+              <ion-icon name="log-out-outline"></ion-icon>
+            </span>
+            <span class="title">Sign Out</span>
+          </a>
+        </div>
       </div>
 
       <!-- ========================= Main ==================== -->
       <div class="main">
         <div class="topbar">
-          <div class="toggle">
+          <div class="toggle" id="sidebarToggle">
             <ion-icon name="menu-outline"></ion-icon>
           </div>
-
-          <div class="search">
-            <label>
-              <input type="text" placeholder="Search here" />
-              <ion-icon name="search-outline"></ion-icon>
-            </label>
-          </div>
+          <div class="new-tit">Solar UPS Monitoring System</div>
 
           <div class="user">
             <img src="assets/customer01.jpg" alt="" />
@@ -102,89 +96,30 @@
         <div class="details">
           <div class="recentOrders">
             <div class="cardHeader">
-              <h2>Recent Orders</h2>
+              <h2>Accounts</h2>
+              <div class="search">
+                <label>
+                  <input type="text" placeholder="Search here" />
+                  <ion-icon name="search-outline"></ion-icon>
+                </label>
+              </div>
               <a href="#" class="btn">View All</a>
             </div>
 
-            <table>
-              <thead>
-                <tr>
-                  <td>Name</td>
-                  <td>Price</td>
-                  <td>Payment</td>
-                  <td>Status</td>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>Star Refrigerator</td>
-                  <td>$1200</td>
-                  <td>Paid</td>
-                  <td><span class="status delivered">Delivered</span></td>
-                </tr>
-
-                <tr>
-                  <td>Dell Laptop</td>
-                  <td>$110</td>
-                  <td>Due</td>
-                  <td><span class="status pending">Pending</span></td>
-                </tr>
-
-                <tr>
-                  <td>Apple Watch</td>
-                  <td>$1200</td>
-                  <td>Paid</td>
-                  <td><span class="status return">Return</span></td>
-                </tr>
-
-                <tr>
-                  <td>Addidas Shoes</td>
-                  <td>$620</td>
-                  <td>Due</td>
-                  <td><span class="status inProgress">In Progress</span></td>
-                </tr>
-
-                <tr>
-                  <td>Star Refrigerator</td>
-                  <td>$1200</td>
-                  <td>Paid</td>
-                  <td><span class="status delivered">Delivered</span></td>
-                </tr>
-
-                <tr>
-                  <td>Dell Laptop</td>
-                  <td>$110</td>
-                  <td>Due</td>
-                  <td><span class="status pending">Pending</span></td>
-                </tr>
-
-                <tr>
-                  <td>Apple Watch</td>
-                  <td>$1200</td>
-                  <td>Paid</td>
-                  <td><span class="status return">Return</span></td>
-                </tr>
-
-                <tr>
-                  <td>Addidas Shoes</td>
-                  <td>$620</td>
-                  <td>Due</td>
-                  <td><span class="status inProgress">In Progress</span></td>
-                </tr>
-              </tbody>
-            </table>
+            <table id="userTable"></table>
           </div>
         </div>
       </div>
     </div>
 
     <!-- =========== Scripts =========  -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
     <script src="../js/home.js"></script>
+    <script src="../js/accmanage.js"></script>
 
     <!-- ====== ionicons ======= -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
